@@ -1,0 +1,16 @@
+/* Car Racing Specific Styles */
+#gameCanvas {
+    background: #333;
+    border-color: var(--neon-red);
+    box-shadow: 0 0 20px rgba(255, 0, 60, 0.2);
+}
+
+.game-container {
+    border-color: var(--neon-red);
+    box-shadow: 0 0 20px rgba(255, 0, 60, 0.2);
+}
+
+.score-board {
+    color: var(--neon-red);
+    text-shadow: 0 0 5px var(--neon-red);
+}

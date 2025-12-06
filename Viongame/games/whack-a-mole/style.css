@@ -1,0 +1,95 @@
+/* Whack-a-Mole Specific Styles */
+.game-container {
+    max-width: 600px;
+}
+
+.score-board {
+    display: flex;
+    gap: 20px;
+    font-size: 1.2rem;
+    color: var(--neon-green);
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.hole {
+    background: #333;
+    border: 4px solid var(--neon-purple);
+    border-radius: 50%;
+    aspect-ratio: 1;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 10px 20px rgba(0, 0, 0, 0.5);
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewport="0 0 100 100" style="fill:black;font-size:30px;"><text y="50%">🔨</text></svg>') 16 0, auto;
+    /* Custom hammer cursor attempt */
+}
+
+.hole::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="20" viewBox="0 0 100 20"><path d="M0 20 Q 50 0 100 20 Z" fill="%23555" /></svg>') bottom center no-repeat;
+    background-size: 100% 100%;
+    z-index: 2;
+}
+
+.mole {
+    width: 70%;
+    height: 80%;
+    background: var(--neon-cyan);
+    border-radius: 40% 40% 10% 10%;
+    position: absolute;
+    bottom: -100%;
+    /* Hidden initially */
+    left: 15%;
+    transition: bottom 0.1s;
+    box-shadow: 0 0 20px var(--neon-cyan);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mole::before {
+    content: '..';
+    color: #000;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-top: -20px;
+}
+
+.mole::after {
+    content: '';
+    width: 40%;
+    height: 10px;
+    background: #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+}
+
+.hole.up .mole {
+    bottom: 0;
+}
+
+/* Hit effect */
+.hole.up .mole.hit {
+    background: var(--neon-red);
+    box-shadow: 0 0 20px var(--neon-red);
+}
+
+@media (max-width: 600px) {
+    .game-grid {
+        gap: 10px;
+    }
+}

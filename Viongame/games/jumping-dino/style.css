@@ -1,0 +1,17 @@
+/* Jumping Dino Specific Styles */
+#gameCanvas {
+    background: #000;
+    border-color: var(--neon-green);
+    box-shadow: 0 0 20px rgba(10, 255, 10, 0.2);
+}
+
+.game-container {
+    border-color: var(--neon-green);
+    box-shadow: 0 0 20px rgba(10, 255, 10, 0.2);
+    max-width: 900px;
+}
+
+.score-board {
+    color: var(--neon-green);
+    text-shadow: 0 0 5px var(--neon-green);
+}

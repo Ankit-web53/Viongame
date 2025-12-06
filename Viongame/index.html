@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viongame - Neon Gaming Dashboard</title>
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#b026ff">
+    <meta name="description" content="A collection of 10 neon-themed JavaScript games">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Viongame">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">VIONGAME</div>
+    </header>
+
+    <main>
+        <div class="games-grid">
+            <!-- Game 1: Flappy Bird -->
+            <a href="games/flappy-bird/index.html" class="game-card">
+                <div class="card-thumbnail">
+                    <i class="fas fa-dove"></i>
+                </div>
+                <div class="card-info">
+                    <h3>Flappy Bird</h3>
+                    <span class="play-btn">Play Now</span>
+                </div>
+            </a>
+
+            <!-- Game 2: Snake -->
+            <a href="games/snake/index.html" class="game-card">
+                <div class="card-thumbnail">
+                    <i class="fas fa-worm"></i>
+                </div>
+                <div class="card-info">
+                    <h3>Snake</h3>
+                    <span class="play-btn">Play Now</span>
+                </div>
+            </a>
+
+            <!-- Game 3: Tic Tac Toe -->
+            <a href="games/tic-tac-toe/index.html" class="game-card">
+                <div class="card-thumbnail">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="card-info">
+                    <h3>Tic Tac Toe</h3>
+                    <span class="play-btn">Play Now</span>
+                </div>
+            </a>
+
+            <!-- Game 4: Memory Card -->
+            <a href="games/memory-card/index.html" class="game-card">
+                <div class="card-thumbnail">
+                    <i class="fas fa-th-large"></i>
+                </div>
+                <div class="card-info">
+                    <h3>Memory Match</h3>
+                    <span class="play-btn">Play Now</span>
+                </div>
+            </a>
+
+            <!-- Game 5: Car Racing -->
+            <a href="games/car-racing/index.html" class="game-card">
+                <div class="card-thumbnail">
+                    <i class="fas fa-car"></i>
+                </div>
+                <div class="card-info">
+                    <h3>Car Racing</h3>
+                    <span class="play-btn">Play Now</span>
+                </div>
+            </a>
+
+            <!-- Game 6: Pong -->
+            <a href="games/pong/index.html" class="game-card">
+                <div class="card-thumbnail">
+                    <i class="fas fa-table-tennis"></i>
+                </div>
+                <div class="card-info">
+                    <h3>Pong</h3>
+                    <span class="play-btn">Play Now</span>
+                </div>
+            </a>
+
+            <!-- Game 7: Brick Breaker -->
+            <a href="games/brick-breaker/index.html" class="game-card">
+                <div class="card-thumbnail">
+                    <i class="fas fa-cubes"></i>
+                </div>
+                <div class="card-info">
+                    <h3>Brick Breaker</h3>
+                    <span class="play-btn">Play Now</span>
+                </div>
+            </a>
+
+            <!-- Game 8: 2048 -->
+            <a href="games/2048/index.html" class="game-card">
+                <div class="card-thumbnail">
+                    <i class="fas fa-border-all"></i>
+                </div>
+                <div class="card-info">
+                    <h3>2048</h3>
+                    <span class="play-btn">Play Now</span>
+                </div>
+            </a>
+
+            <!-- Game 9: Whack-a-Mole -->
+            <a href="games/whack-a-mole/index.html" class="game-card">
+                <div class="card-thumbnail">
+                    <i class="fas fa-gavel"></i>
+                </div>
+                <div class="card-info">
+                    <h3>Whack-a-Mole</h3>
+                    <span class="play-btn">Play Now</span>
+                </div>
+            </a>
+
+            <!-- Game 10: Jumping Dino -->
+            <a href="games/jumping-dino/index.html" class="game-card">
+                <div class="card-thumbnail">
+                    <i class="fas fa-dragon"></i>
+                </div>
+                <div class="card-info">
+                    <h3>Jumping Dino</h3>
+                    <span class="play-btn">Play Now</span>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Viongame. All rights reserved.</p>
+        <div class="social-links">
+            <!-- Add social icons if needed -->
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- PWA Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => console.log('SW registered:', registration))
+                    .catch(error => console.log('SW registration failed:', error));
+            });
+        }
+    </script>
+</body>
+
+</html>

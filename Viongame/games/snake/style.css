@@ -1,0 +1,12 @@
+.d-pad-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    /* Space for up/down buttons */
+}
+
+/* Specific Snake Styles if needed */
+canvas {
+    border-color: var(--neon-green);
+    box-shadow: 0 0 15px rgba(10, 255, 10, 0.2);
+}
