@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong - Viongame</title>
+    <link rel="stylesheet" href="../../shared/game-style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="game-page">
+    <div class="game-container">
+        <div class="game-header">
+            <a href="../../index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back
+            </a>
+            <div class="score-board">
+                <span id="playerScore">0</span> - <span id="aiScore">0</span>
+            </div>
+        </div>
+
+        <canvas id="gameCanvas" width="600" height="400"></canvas>
+
+        <div class="controls-info">
+            <p>Desktop: Arrow Up/Down or W/S to Move</p>
+            <p>Mobile: Tap/Swipe Up/Down</p>
+        </div>
+
+        <div id="gameOverScreen" class="game-over-screen hidden">
+            <h2 id="winnerText">YOU WIN!</h2>
+            <p>Final Score: <span id="finalScoreDisplay">0 - 0</span></p>
+            <button id="restartBtn" class="restart-btn">Play Again</button>
+        </div>
+    </div>
+
+    <!-- Mobile Controls Overlay -->
+    <div class="mobile-controls">
+        <div class="control-btn" id="btn-up"><i class="fas fa-chevron-up"></i></div>
+        <div class="control-btn" id="btn-down"><i class="fas fa-chevron-down"></i></div>
+    </div>
+
+    <script src="../../shared/game-utils.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

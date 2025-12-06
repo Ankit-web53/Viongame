@@ -1,0 +1,11 @@
+/* Flappy Bird Specific Styles */
+#gameCanvas {
+    background: linear-gradient(to bottom, #000022, #000044);
+    box-shadow: 0 0 20px var(--neon-blue);
+    border-color: var(--neon-blue);
+}
+
+.game-container {
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 20px rgba(0, 114, 255, 0.2);
+}

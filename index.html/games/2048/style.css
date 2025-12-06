@@ -1,0 +1,145 @@
+/* 2048 Specific Styles */
+.game-container {
+    max-width: 500px;
+}
+
+.score-board {
+    display: flex;
+    gap: 15px;
+}
+
+.score-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: var(--neon-cyan);
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    background: #222;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    aspect-ratio: 1;
+    position: relative;
+    border: 2px solid var(--neon-cyan);
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+}
+
+.tile {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    transition: all 0.15s ease-in-out;
+    position: relative;
+}
+
+/* Tile Colors */
+.tile[data-val="2"] {
+    background: #eee4da;
+    color: #776e65;
+    box-shadow: 0 0 5px #eee4da;
+}
+
+.tile[data-val="4"] {
+    background: #ede0c8;
+    color: #776e65;
+    box-shadow: 0 0 5px #ede0c8;
+}
+
+.tile[data-val="8"] {
+    background: #f2b179;
+    color: #f9f6f2;
+    box-shadow: 0 0 10px #f2b179;
+}
+
+.tile[data-val="16"] {
+    background: #f59563;
+    color: #f9f6f2;
+    box-shadow: 0 0 10px #f59563;
+}
+
+.tile[data-val="32"] {
+    background: #f67c5f;
+    color: #f9f6f2;
+    box-shadow: 0 0 15px #f67c5f;
+}
+
+.tile[data-val="64"] {
+    background: #f65e3b;
+    color: #f9f6f2;
+    box-shadow: 0 0 15px #f65e3b;
+}
+
+.tile[data-val="128"] {
+    background: #edcf72;
+    color: #f9f6f2;
+    box-shadow: 0 0 20px #edcf72;
+}
+
+.tile[data-val="256"] {
+    background: #edcc61;
+    color: #f9f6f2;
+    box-shadow: 0 0 20px #edcc61;
+}
+
+.tile[data-val="512"] {
+    background: #edc850;
+    color: #f9f6f2;
+    box-shadow: 0 0 25px #edc850;
+}
+
+.tile[data-val="1024"] {
+    background: #edc53f;
+    color: #f9f6f2;
+    box-shadow: 0 0 25px #edc53f;
+}
+
+.tile[data-val="2048"] {
+    background: #edc22e;
+    color: #f9f6f2;
+    box-shadow: 0 0 30px #edc22e;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px #edc22e;
+    }
+
+    to {
+        box-shadow: 0 0 30px #edc22e, 0 0 10px #fff;
+    }
+}
+
+.tile-new {
+    animation: pop 0.2s ease-in;
+}
+
+.tile-merged {
+    animation: pop 0.2s ease-in;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

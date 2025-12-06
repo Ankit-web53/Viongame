@@ -1,0 +1,16 @@
+/* Brick Breaker Specific Styles */
+#gameCanvas {
+    background: #000;
+    border-color: var(--neon-purple);
+    box-shadow: 0 0 20px rgba(176, 38, 255, 0.2);
+}
+
+.game-container {
+    border-color: var(--neon-purple);
+    box-shadow: 0 0 20px rgba(176, 38, 255, 0.2);
+}
+
+.score-board {
+    color: var(--neon-purple);
+    text-shadow: 0 0 5px var(--neon-purple);
+}

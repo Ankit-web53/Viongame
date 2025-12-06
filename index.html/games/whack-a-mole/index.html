@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whack-a-Mole - Viongame</title>
+    <link rel="stylesheet" href="../../shared/game-style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="game-page">
+    <div class="game-container">
+        <div class="game-header">
+            <a href="../../index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back
+            </a>
+            <div class="score-board">
+                <div class="stat-item">Score: <span id="score">0</span></div>
+                <div class="stat-item">Time: <span id="time-left">30</span>s</div>
+                <div class="stat-item">High: <span id="high-score">0</span></div>
+            </div>
+        </div>
+
+        <div class="game-grid">
+            <div class="hole" id="hole1">
+                <div class="mole"></div>
+            </div>
+            <div class="hole" id="hole2">
+                <div class="mole"></div>
+            </div>
+            <div class="hole" id="hole3">
+                <div class="mole"></div>
+            </div>
+            <div class="hole" id="hole4">
+                <div class="mole"></div>
+            </div>
+            <div class="hole" id="hole5">
+                <div class="mole"></div>
+            </div>
+            <div class="hole" id="hole6">
+                <div class="mole"></div>
+            </div>
+            <div class="hole" id="hole7">
+                <div class="mole"></div>
+            </div>
+            <div class="hole" id="hole8">
+                <div class="mole"></div>
+            </div>
+            <div class="hole" id="hole9">
+                <div class="mole"></div>
+            </div>
+        </div>
+
+        <div class="controls-info">
+            <p>Click/Tap the moles as fast as you can!</p>
+        </div>
+
+        <div id="gameOverScreen" class="game-over-screen hidden">
+            <h2 id="gameOverTitle">TIME'S UP!</h2>
+            <p>Score: <span id="finalScore">0</span></p>
+            <button id="restartBtn" class="restart-btn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="../../shared/game-utils.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

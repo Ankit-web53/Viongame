@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe - Viongame</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../shared/game-style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="game-page">
+    <div class="game-container">
+        <div class="game-header">
+            <a href="../../index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back</a>
+            <div class="score-board">Score: <span id="score">0</span></div>
+        </div>
+
+        <div class="game-board" id="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+
+        <div id="statusMessage" class="status-message">Your Turn (X)</div>
+
+        <div id="gameOverScreen" class="game-over-screen hidden">
+            <h2 id="winnerText">YOU WIN!</h2>
+            <button id="restartBtn" class="restart-btn">Play Again</button>
+        </div>
+
+        <div class="controls-info">
+            Tap to place X. AI plays O.
+        </div>
+    </div>
+
+    <script src="../../shared/game-utils.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
